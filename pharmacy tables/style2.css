@@ -96,16 +96,24 @@ tbody {
 
 @media (max-width: 960px){
   tr,th,td{
-    padding: 1.2rem .5rem;
+    padding: 1.2rem 0.5em;
     text-align: center;
     font-weight: 600;
-    font-size: 1.4rem;
-    letter-spacing: 0.5px;
+    font-size: 2rem;
+    letter-spacing: 0;
   }
   body{
     padding: 2rem;
   }
   .related-entities{
-     flex-direction: column;
+     gap: 3rem;
   }
+  .table-name{
+    font-size: 2.3rem;
+  }
+}
+@media (max-width:700px){
+    .related-entities{
+      flex-direction: column;
+    }
 }
