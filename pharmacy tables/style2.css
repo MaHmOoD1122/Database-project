@@ -120,6 +120,6 @@ tbody {
 }
 @media (max-width:450px){
     .medicine-table tr,th,td{
-      font-size: 1.4
+      font-size: 1.4rem
     }
 }
