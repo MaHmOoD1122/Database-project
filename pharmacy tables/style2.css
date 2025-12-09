@@ -96,13 +96,16 @@ tbody {
 }
 
 @media (max-width: 960px){
-    html{font-size: 58.5%;}
-  body{    padding: 2rem;
-}
-    
-  .related-entities{    flex-direction: column;
-    }
-  .container{
+  html{
+    font-size: 58.5%;
+  }
+  body{
+    padding: 2rem;
+  }
+  .related-entities{
+     flex-direction: column;
+  }
+   .container{
       gap: 1rem;
   }
 }
