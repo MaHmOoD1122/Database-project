@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5rem;
+  min-height: 100vh;
+  display: flex;
+  font-size: 1.5rem;
+  font-family: monospace;
+  flex-direction: column;
+  align-items: center;
+}
+.main {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  gap: 13rem;
+  font-family: monospace;
+}
+table {
+  margin-block: 0 2rem;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+tr,
+th,
+td {
+  padding: 1.2rem 1.4rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+}
+tr:not(:last-child) td,
+th {
+  border-bottom: 2px solid black;
+}
+tbody tr:nth-child(odd) {
+  background-color: #e4e2e2;
+}
+td:not(:last-child) {
+  border-right: 2px solid black;
+}
+th:not(:last-child) {
+  border-right: 2px solid black;
+}
+
+thead {
+  background-color: rgb(198 195 195);
+}
+tbody {
+  color: black;
+  background-color: white;
+}
+.header {
+  letter-spacing: 1rem;
+  border: 8px double black;
+  background-color: gray;
+  width: 45rem;
+  text-align: center;
+  border-radius: 2rem;
+  margin-block: 0 2rem;
+  color: white;
+}
+.related-entities {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  margin-block: 0 4rem;
+}
+.related-entities table {
+  margin-block: 2rem;
+}
+.table-name {
+  font-weight: 900;
+  font-size: 3rem;
+  border: 9px double black;
+  border-radius: 10rem;
+  padding: 1rem 2rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}

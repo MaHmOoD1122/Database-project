@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg>
+      <symbol id="icon-bin2" viewBox="0 0 32 32">
+        <path
+          d="M6 32h20l2-22h-24zM20 4v-4h-8v4h-10v6l2-2h24l2 2v-6h-10zM18 4h-4v-2h4v2z"
+        ></path>
+      </symbol>
+
+      <symbol id="icon-add-outline1" viewBox="0 0 20 20">
+        <path d="M11 9h4v2h-4v4h-2v-4h-4v-2h4v-4h2v4zM10 20c..."></path>
+      </symbol>
+
+      <symbol id="icon-loop2" viewBox="0 0 34 34">
+        <path
+          d="M27.802 5.197c-2.925-3.194-7.13-5.197-11.803-5.197-8.837 0-16 7.163-16 16h3c0-7.18 5.82-13 13-13 3.844 0 7.298 1.669 9.678 4.322l-4.678 4.678h11v-11l-4.198 4.197z"
+        ></path>
+        <path
+          d="M29 16c0 7.18-5.82 13-13 13-3.844 0-7.298-1.669-9.678-4.322l4.678-4.678h-11v11l4.197-4.197c2.925 3.194 7.13 5.197 11.803 5.197 8.837 0 16-7.163 16-16h-3z"
+        ></path>
+      </symbol>
+    </svg>
+    <main class="main">
+      <div class="navigation-dropdown">
+        <label for="formSelector">Select form</label>
+        <select id="formSelector" onchange="showForm()">
+          <option value="">Select</option>
+          <option value="medicineForm">Medicines</option>
+          <option value="insuranceForm">Patient insurances</option>
+          <option value="patientForm">Patients</option>
+          <option value="supplierForm">Suppliers</option>
+          <option value="returnForm">Returns</option>
+          <option value="prescriptionForm">Prescriptions</option>
+          <option value="employeeForm">Employees</option>
+          <option value="recieptForm">Reciepts</option>
+          <option value="branchForm">Branches</option>
+          <option value="accountForm">User accounts</option>
+          <option value="providesForm">Provides</option>
+          <option value="containsForm">Contains</option>
+          <option value="includesForm">Includes</option>
+          <option value="suppliesForm">Supplies</option>
+          <option value="existsInForm">Exists in</option>
+          <option value="dealsWithForm">Deals with</option>
+          <option value="usesForm">Uses</option>
+          <option value="sellsForm">Sells</option>
+        </select>
+      </div>
+
+      <!-- Medicine -->
+      <form action="#" class="medicine-form form" id="medicineForm">
+        <h2 class="form-header">Medicines</h2>
+        <div class="input-box">
+          <label for="medicine-code" class="label">Medicine Code</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine code"
+            class="form-input"
+            id="medicine-code"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="medicine-name" class="label">Name</label>
+          <input
+            type="text"
+            placeholder="Enter the medicine name"
+            class="form-input"
+            id="medicine-name"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="medicine-quantity" class="label">Quantity</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine quantity"
+            class="form-input"
+            id="medicine-quantity"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="medicine-manufacturer" class="label">Manufacturer</label>
+          <input
+            type="text"
+            placeholder="Enter the medicine manufacturer"
+            class="form-input"
+            id="medicine-manufacturer"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="medicine-price" class="label">Price</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine manufacturer"
+            class="form-input"
+            id="medicine-price"
+            required
+          />
+        </div>
+
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/medicines.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+      <!-- ///////////////////////////////////// -->
+      <!-- Patients-->
+      <form action="#" id="patientForm" class="patient-form form hidden">
+        <h2 class="form-header">Patients</h2>
+        <div class="input-box">
+          <label for="patient-id" class="label">Patient id</label>
+          <input
+            type="number"
+            placeholder="Enter the id"
+            class="form-input"
+            id="patient-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="patient-fname" class="label">First name</label>
+          <input
+            type="text"
+            placeholder="Enter the first name"
+            class="form-input"
+            id="patient-fname"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="patient-lname" class="label">Last name</label>
+          <input
+            type="text"
+            placeholder="Enter the last name "
+            class="form-input"
+            id="patient-lname"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="patient-age" class="label">Patient age</label>
+          <input
+            type="number"
+            placeholder="Enter the age"
+            class="form-input"
+            id="patient-age"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/patients.html" class="navigation-btn">
+          View table</a
+        >
+      </form>
+      <!-- //////////////////////////////// -->
+      <!-- Patients No -->
+      <form
+        action="#"
+        class="multivalued-attribute form hidden"
+        id="patientNoForm"
+      >
+        <h2 class="form-header">Patient_No</h2>
+        <div class="input-box">
+          <label for="patient-phone-no" class="label">patient phone no</label>
+          <input
+            type="number"
+            placeholder="Enter the patient phone no"
+            class="form-input"
+            id="patient-phone-no"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="Patient-id" class="label">Patient id</label>
+          <input
+            type="number"
+            placeholder="Enter the patient id"
+            class="form-input"
+            id="Patient-id"
+            required
+          />
+        </div>
+        <button class="submit-btn btn">Submit</button>
+      </form>
+
+      <!--//////////////////////////////////-->
+      <!-- Suppliers-->
+      <form action="#" class="supplier-form form hidden" id="supplierForm">
+        <h2 class="form-header">Suppliers</h2>
+        <div class="input-box">
+          <label for="suppliers-code" class="label">Supplier code</label>
+          <input
+            type="number"
+            placeholder="Enter the code"
+            class="form-input"
+            id="suppliers-code"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="supplier-name" class="label">Supplier name</label>
+          <input
+            type="text"
+            placeholder="Enter the name"
+            class="form-input"
+            id="supplier-name"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="employee-id" class="label">Employee id</label>
+          <input
+            type="number"
+            placeholder="Enter the employee id "
+            class="form-input"
+            id="employee-id"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/suppliers.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+
+      <!-- //////////////////////////////// -->
+      <!-- Returns -->
+      <form action="#" class="return-form form hidden" id="returnForm">
+        <h2 class="form-header">Returns</h2>
+        <div class="input-box">
+          <label for="return-date" class="label">Return date</label>
+          <input
+            type="date"
+            placeholder="Enter the return date"
+            class="form-input"
+            id="return-date"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="return-amount" class="label">Return amount</label>
+          <input
+            type="text"
+            placeholder="Enter the return amount"
+            class="form-input"
+            id="return-amount"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="return-id" class="label">Return id</label>
+          <input
+            type="number"
+            placeholder="Enter the return id "
+            class="form-input"
+            id="return-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="medicine-code" class="label">Medicine code</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine code"
+            class="form-input"
+            id="medicine-code"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="branch-id" class="label">Branch id</label>
+          <input
+            type="number"
+            placeholder="Enter the branch id"
+            class="form-input"
+            id="branch-id"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/returns.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+      <!-- //////////////////////////////// -->
+      <!-- Prescriptions -->
+      <form
+        action="#"
+        class="prescription-form form hidden"
+        id="prescriptionForm"
+      >
+        <h2 class="form-header">Prescriptions</h2>
+        <div class="input-box">
+          <label for="prescription-id" class="label">Prescription id</label>
+          <input
+            type="number"
+            placeholder="Enter the prescription id"
+            class="form-input"
+            id="prescription-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="prescription-info" class="label">Prescription info</label>
+          <input
+            type="text"
+            placeholder="Enter the prescription info"
+            class="form-input"
+            id="prescription-info"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="prescription-date" class="label">Prescription date</label>
+          <input
+            type="date"
+            placeholder="Enter the prescription date "
+            class="form-input"
+            id="prescription-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="doctor-name" class="label">Doctor name</label>
+          <input
+            type="text"
+            placeholder="Enter the doctor name"
+            class="form-input"
+            id="doctor-name"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="employee-id" class="label">Employee id</label>
+          <input
+            type="number"
+            placeholder="Enter the employee id"
+            class="form-input"
+            id="employee-id"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/prescriptions.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+
+      <!-- //////////////////////////////// -->
+      <!-- Patient insurances -->
+      <form action="#" class="prescription-form form hidden" id="insuranceForm">
+        <h2 class="form-header">Patient insurances</h2>
+        <div class="input-box">
+          <label for="discount-rate" class="label">Discount rate</label>
+          <input
+            type="number"
+            placeholder="Enter the discount rate"
+            class="form-input"
+            id="discount-rate"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="company-name" class="label">Company name</label>
+          <input
+            type="text"
+            placeholder="Enter the company name"
+            class="form-input"
+            id="company-name"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="insurance-id" class="label">Insurance id</label>
+          <input
+            type="number"
+            placeholder="Enter the insurance id"
+            class="form-input"
+            id="insurance-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="medicine-code" class="label">Medicine code</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine code"
+            class="form-input"
+            id="medicine-code"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="patient-id" class="label">Patient id</label>
+          <input
+            type="number"
+            placeholder="Enter the patient id"
+            class="form-input"
+            id="patient-id"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/insurances.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+
+      <!-- //////////////////////////////// -->
+      <!-- Employees -->
+      <form action="#" class="employee-form form hidden" id="employeeForm">
+        <h2 class="form-header">Employees</h2>
+        <div class="input-box">
+          <label for="employee-id" class="label">Employee id</label>
+          <input
+            type="number"
+            placeholder="Enter the employee id"
+            class="form-input"
+            id="employee-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="employee-fname" class="label">First name</label>
+          <input
+            type="text"
+            placeholder="Enter the first name"
+            class="form-input"
+            id="employee-fname"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="employee-lname" class="label">Last name</label>
+          <input
+            type="text"
+            placeholder="Enter the last name"
+            class="form-input"
+            id="employee-lname"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="employee-age" class="label">Age</label>
+          <input
+            type="number"
+            placeholder="Enter the age"
+            class="form-input"
+            id="employee-age"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="employee-email" class="label">Email</label>
+          <input
+            type="email"
+            placeholder="Enter the email"
+            class="form-input"
+            id="employee-email"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="U-employee-id" class="label"> U-Employee id </label>
+          <input
+            type="number"
+            placeholder="Enter the U-employee id"
+            class="form-input"
+            id="U-employee-id"
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/employees.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+      <!-- //////////////////////////////// -->
+      <!-- Employees No -->
+      <form action="#" class="multivalued-attribute form hidden" id="empNoForm">
+        <h2 class="form-header">Employees_No</h2>
+        <div class="input-box">
+          <label for="emp-phone-no" class="label">Employee phone no</label>
+          <input
+            type="number"
+            placeholder="Enter the employee phone no"
+            class="form-input"
+            id="emp-phone-no"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="emp-id" class="label">Employee id</label>
+          <input
+            type="number"
+            placeholder="Enter the employee id"
+            class="form-input"
+            id="emp-id"
+            required
+          />
+        </div>
+
+        <button class="submit-btn btn">Submit</button>
+      </form>
+
+      <!-- //////////////////////////////// -->
+      <!-- Reciepts -->
+      <form action="#" class="reciept-form form hidden" id="recieptForm">
+        <h2 class="form-header">Reciepts</h2>
+        <div class="input-box">
+          <label for="reciept-id" class="label">Reciept id</label>
+          <input
+            type="number"
+            placeholder="Enter the reciept id"
+            class="form-input"
+            id="reciept-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="reciept-amount" class="label">Total amount</label>
+          <input
+            type="number"
+            placeholder="Enter the reciept amount"
+            class="form-input"
+            id="reciept-amount"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="reciept-date" class="label">Reciept date</label>
+          <input
+            type="date"
+            placeholder="Enter the last name"
+            class="form-input"
+            id="reciept-date"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="reciept-payement-method" class="label"
+            >Payement method</label
+          >
+          <input
+            type="text"
+            placeholder="Enter the payement method"
+            class="form-input"
+            id="reciept-payement-method"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="re-employee-id" class="label">Employee id</label>
+          <input
+            type="number"
+            placeholder="Enter the employee id"
+            class="form-input"
+            id="employee-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="re-branch-id" class="label"> Branch id</label>
+          <input
+            type="number"
+            placeholder="Enter the branch id"
+            class="form-input"
+            id="re-branch-id"
+          />
+        </div>
+        <div class="input-box">
+          <label for="re-patient-id" class="label"> Patient id</label>
+          <input
+            type="number"
+            placeholder="Enter the patient id"
+            class="form-input"
+            id="re-patient-id"
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/reciepts.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+      <!-- /////////////////////////////// -->
+      <!-- Branches -->
+      <form action="#" class="branch-form form hidden" id="branchForm">
+        <h2 class="form-header">Branches</h2>
+        <div class="input-box">
+          <label for="branch-id" class="label">Branch id</label>
+          <input
+            type="number"
+            placeholder="Enter the branch id"
+            class="form-input"
+            id="branch-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="branch-location" class="label">Branch location</label>
+          <input
+            type="text"
+            placeholder="Enter the branch location"
+            class="form-input"
+            id="branch-location"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/branches.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+      <!-- /////////////////////////////// -->
+      <!-- Branch number -->
+      <form
+        action="#"
+        class="multivalued-attribute form hidden"
+        id="branchNoForm"
+      >
+        <h2 class="form-header">Branch_No</h2>
+        <div class="input-box">
+          <label for="branch-no" class="label">Branch no</label>
+          <input
+            type="number"
+            placeholder="Enter the branch no"
+            class="form-input"
+            id="branch-no"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="branch-no-id" class="label">Branch id</label>
+          <input
+            type="number"
+            placeholder="Enter the branch id"
+            class="form-input"
+            id="branch-no-id"
+            required
+          />
+        </div>
+        <button class="submit-btn btn">Submit</button>
+      </form>
+
+      <!-- //////////////////////////////// -->
+      <!-- User accounts -->
+      <form action="#" class="account-form form hidden" id="accountForm">
+        <h2 class="form-header">User accounts</h2>
+        <div class="input-box">
+          <label for="account-name" class="label">Account name</label>
+          <input
+            type="text"
+            placeholder="Enter the account name"
+            class="form-input"
+            id="account-name"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="account-password" class="label">Account password</label>
+          <input
+            type="password"
+            placeholder="Enter the account password"
+            class="form-input"
+            id="account-password"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="user-role" class="label">User role</label>
+          <input
+            type="text"
+            placeholder="Enter the user role"
+            class="form-input"
+            id="user-role"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="U-employee--id" class="label">U-employee-id</label>
+          <input
+            type="text"
+            placeholder="Enter the U-employee-id"
+            class="form-input"
+            id="U-employee--id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="Employee-id" class="label">Employee id</label>
+          <input
+            type="number"
+            placeholder="Enter the employee id"
+            class="form-input"
+            id="Employee-id"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/accounts.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+
+      <!-- /////////////////////////////// -->
+      <!-- Provides -->
+      <form action="#" class="provides-form form hidden" id="providesForm">
+        <h2 class="form-header">Provides</h2>
+        <div class="input-box">
+          <label for="Insurance-id" class="label">Insurance id</label>
+          <input
+            type="number"
+            placeholder="Enter the insurance id"
+            class="form-input"
+            id="Insurance-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="Medicine-code" class="label">Medicine code</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine code"
+            class="form-input"
+            id="Medicine-code"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/manyToMany.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+
+      <!-- /////////////////////////////// -->
+      <!-- Contains -->
+      <form action="#" class="contains-form form hidden" id="containsForm">
+        <h2 class="form-header">Contains</h2>
+        <div class="input-box">
+          <label for="Prescription-id" class="label">Prescription id</label>
+          <input
+            type="number"
+            placeholder="Enter the prescription id"
+            class="form-input"
+            id="Prescription-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="Medicine-code" class="label">Medicine code</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine code"
+            class="form-input"
+            id="Medicine-code"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/manyToMany.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+
+      <!-- /////////////////////////////// -->
+      <!-- Includes -->
+      <form action="#" class="includes-form form hidden" id="includesForm">
+        <h2 class="form-header">Includes</h2>
+        <div class="input-box">
+          <label for="Return-id" class="label">Return id</label>
+          <input
+            type="number"
+            placeholder="Enter the return id"
+            class="form-input"
+            id="Return-id"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="Medicine-code" class="label">Medicine code</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine code"
+            class="form-input"
+            id="Medicine-code"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+
+        <a href="pharmacy tables/manyToMany.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+
+      <!-- /////////////////////////////// -->
+      <!-- Supplies -->
+      <form action="#" class="supplies-form form hidden" id="suppliesForm">
+        <h2 class="form-header">Supplies</h2>
+        <div class="input-box">
+          <label for="supplier-code" class="label">Supplier code</label>
+          <input
+            type="number"
+            placeholder="Enter the supplier code"
+            class="form-input"
+            id="supplier-code"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="Medicine-Code" class="label">Medicine code</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine code"
+            class="form-input"
+            id="Medicine-Code"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/manyToMany.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+      <!-- /////////////////////////////// -->
+      <!-- Exists in -->
+      <form action="#" class="exists-in-form form hidden" id="existsInForm">
+        <h2 class="form-header">Exists_in</h2>
+        <div class="input-box">
+          <label for="BranchId" class="label">Branch id</label>
+          <input
+            type="number"
+            placeholder="Enter the branch id"
+            class="form-input"
+            id="BranchId"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="Medicinecode" class="label">Medicine code</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine code"
+            class="form-input"
+            id="Medicinecode"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/manyToMany.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+
+      <!-- /////////////////////////////// -->
+      <!-- Deals with -->
+      <form action="#" class="deals-with-form form hidden" id="dealsWithForm">
+        <h2 class="form-header">Deals_with</h2>
+        <div class="input-box">
+          <label for="patientId" class="label">Patient id</label>
+          <input
+            type="number"
+            placeholder="Enter the patient id"
+            class="form-input"
+            id="patientId"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="employeeId" class="label">Employee id</label>
+          <input
+            type="number"
+            placeholder="Enter the employee id"
+            class="form-input"
+            id="employeeId"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/manyToMany.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+
+      <!-- /////////////////////////////// -->
+      <!-- Uses -->
+      <form action="#" class="uses-form form hidden" id="usesForm">
+        <h2 class="form-header">Uses form</h2>
+        <div class="input-box">
+          <label for="PatientId" class="label">Patient id</label>
+          <input
+            type="number"
+            placeholder="Enter the patient id"
+            class="form-input"
+            id="PatientId"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="MedCode" class="label">Medicine code</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine code"
+            class="form-input"
+            id="MedCode"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/manyToMany.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+      <!-- /////////////////////////////// -->
+      <!-- Sells -->
+      <form action="#" class="sells-form form hidden" id="sellsForm">
+        <h2 class="form-header">Sells form</h2>
+        <div class="input-box">
+          <label for="empId" class="label">Employee id</label>
+          <input
+            type="number"
+            placeholder="Enter the employee id"
+            class="form-input"
+            id="empId"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="Med-Code" class="label">Medicine code</label>
+          <input
+            type="number"
+            placeholder="Enter the medicine code"
+            class="form-input"
+            id="Med-Code"
+            required
+          />
+        </div>
+        <div class="form-btns">
+          <button class="delete-btn btn">
+            Delete
+            <svg class="icon bin-icon">
+              <use xlink:href="#icon-bin2"></use>
+            </svg>
+          </button>
+          <button class="add-btn btn">
+            Add
+            <svg class="add-icon icon-add-outline1">
+              <use xlink:href="#icon-add-outline1"></use>
+            </svg>
+          </button>
+          <button class="update-btn btn">
+            Update
+            <svg class="update-icon icon-loop2">
+              <use xlink:href="#icon-loop2"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="submit-btn btn">Submit</button>
+        <a href="pharmacy tables/manyToMany.html" class="navigation-btn"
+          >View table</a
+        >
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

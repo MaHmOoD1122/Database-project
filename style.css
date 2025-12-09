@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #d7005e, #000000);
+  justify-content: center;
+  font-family: "Stack Sans Notch", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 3rem 0;
+}
+.form {
+  width: 55rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  gap: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  margin-block: 0 6rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.multivalued-attribute {
+  margin-block: 4rem 1rem;
+}
+
+.form-header {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  transition: all 0.3s;
+  text-align: center;
+}
+.form-input {
+  min-width: 100%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+.form-input::placeholder {
+  font-size: 1.5rem;
+}
+.form-input:focus {
+  outline: none;
+  transform: scale(1.05);
+}
+.label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-inline-start: 1rem;
+  margin-block-end: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+.input-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.form-btns {
+  display: flex;
+  gap: 1rem;
+  margin-block: 1rem 0;
+}
+.btn {
+  margin-block-start: 1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 2rem;
+  background-color: white;
+}
+.btn:hover {
+  filter: brightness(0.9);
+}
+.btn:active {
+  transform: translateY(3px);
+}
+.submit-btn {
+  font-size: 2.2rem;
+  width: 100%;
+}
+.delete-btn {
+  color: white;
+  background: #c40606;
+  font-weight: 400;
+  display: flex;
+  border: 3px solid white;
+  margin-inline-end: 1.5rem;
+  align-items: center;
+  gap: 1rem;
+}
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.update-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.submit-btn:hover {
+  filter: brightness(0.95);
+}
+.submit-btn:active {
+  transform: translateY(0.3rem);
+}
+.navigation-dropdown {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 3rem;
+  align-items: center;
+  margin-block-end: 2rem;
+}
+select {
+  font-size: 2rem;
+  font-family: "Stack Sans Notch";
+  outline: none;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.navigation-btn {
+  text-decoration: none;
+  font-size: 2rem;
+  width: 90%;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: white;
+  color: black;
+  margin-block: 3rem;
+  padding: 1rem 3rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+  font-weight: 700;
+  margin-block: 1rem 0;
+}
+.navigation-btn:active {
+  transform: translateY(0.3rem);
+}
+.navigation-btn:hover {
+  filter: brightness(0.93);
+}
+
+.bin-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: white;
+}
+.add-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid black;
+  fill: black;
+  border-radius: 1rem;
+}
+.update-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: black;
+  fill: black;
+}
+svg {
+  display: none;
+}
+@media (max-width: 550px) {
+  .form {
+    width: 40rem;
+    padding: 3rem 3.5rem;
+  }
+  .form-btns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn {
+    justify-content: center;
+    margin-inline-end: 0;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 58%;
+  }
+  .form {
+    width: 35rem;
+    padding: 3rem 2.5rem;
+  }
+}
