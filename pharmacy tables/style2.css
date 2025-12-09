@@ -75,6 +75,7 @@ tbody {
 .related-entities {
   display: flex;
   gap: 6rem;
+  flex-direction: column;
   align-items: center;
   margin-block: 0 4rem;
 }
@@ -83,7 +84,7 @@ tbody {
 }
 .table-name {
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.5rem;
   border: 9px double black;
   border-radius: 10rem;
   padding: 1rem 2rem;
@@ -92,5 +93,16 @@ tbody {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+}
+
+@media (max-width: 960px){
+    html{font-size: 58.5%;}
+  body{    padding: 2rem;
+}
+    
+  .related-entities{    flex-direction: column;
+    }
+  .container{
+      gap: 1rem;
+  }
 }
