@@ -92,6 +92,7 @@ tbody {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 
 @media (max-width: 960px){
@@ -115,5 +116,10 @@ tbody {
 @media (max-width:700px){
     .related-entities{
       flex-direction: column;
+    }
+}
+@media (max-width:450px){
+    .medicine-table tr,th,td{
+      font-size: 1.4
     }
 }
