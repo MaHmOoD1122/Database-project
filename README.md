@@ -6,5 +6,5 @@ This project showcases the Front-End development of a two-part data management i
 - CSS
 - JS
 
-  ## Live link
-  https://mahmood1122.github.io/Database-project/
+## Live link
+https://mahmood1122.github.io/Database-project/
